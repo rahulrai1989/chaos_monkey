@@ -19,9 +19,6 @@ jobs:
           name: Install System Dependencies
           command: |
             sudo apt-get update && sudo apt-get -f install && sudo apt-get install wget
-      - run: 
-          name: Check Rejected Commits
-          command: ./deploy
       - run: bash .circleci/setup-heroku.sh
       - add_ssh_keys:
           fingerprints:
