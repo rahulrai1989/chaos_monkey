@@ -32,7 +32,6 @@ jobs:
           name: Install System Dependencies
           command: |
             sudo apt install -y libpq-dev
-            sudo apt install php-bcmath
             sudo apt install -y libpng-dev
             sudo apt install -y libxml2-dev
             sudo docker-php-ext-install pdo pdo_pgsql gd zip xml
