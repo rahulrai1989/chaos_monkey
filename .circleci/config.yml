@@ -6,7 +6,7 @@ jobs:
   build:
     working_directory: ~/chaos-monkey
     docker:
-      - image: circleci/php:7.1
+      - image: ucreateit/php7.2:v0.2
       - image: circleci/postgres:10
     environment:
       - APP_ENV: testing
@@ -32,7 +32,7 @@ jobs:
           name: Install System Dependencies
           command: |
             sudo apt install -y libpq-dev
-            sudo apt install php7.1-bcmath
+            sudo apt install php-bcmath
             sudo apt install -y libpng-dev
             sudo apt install -y libxml2-dev
             sudo docker-php-ext-install pdo pdo_pgsql gd zip xml
