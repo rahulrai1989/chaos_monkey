@@ -56,6 +56,9 @@ jobs:
           name: PHP Lint
           command: ./.deploy/commands/parallel_lint.sh
       - run:
+          name: Unit Tests
+          command: ./.deploy/commands/phpunit.sh
+      - run:
           name: PHP CodeSniffer
           command: ./.deploy/commands/phpcs.sh
       - run:
