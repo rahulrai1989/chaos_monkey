@@ -15,6 +15,8 @@
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
+    <script src="https://js.pusher.com/4.3/pusher.min.js"></script>
+    <script src="{{ asset('js/pusher.js') }}"></script>
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">

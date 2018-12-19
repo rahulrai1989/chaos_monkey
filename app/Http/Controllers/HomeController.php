@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Sse\Event;
-use Sse\SSE;
+use Pusher\Pusher;
 
 class HomeController extends Controller
 {
@@ -25,6 +24,19 @@ class HomeController extends Controller
      */
     public function index()
     {
+        $options = array(
+            'cluster' => env('PUSHER_APP_CLUSTER'),
+            'useTLS' => true
+          );
+          $pusher = new Pusher(
+            env('PUSHER_APP_KEY'),
+            env('PUSHER_APP_SECRET'),
+            env('PUSHER_APP_ID'),
+            $options
+          );
+        
+          $data['message'] = 'hello world';
+          $pusher->trigger('my-channel', 'my-event', $data);
         return view('home');
     }
 }
