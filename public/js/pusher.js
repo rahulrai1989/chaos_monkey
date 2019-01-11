@@ -1,6 +1,6 @@
 Pusher.logToConsole = true;
 
-    var pusher = new Pusher('aa067185cf68f7dd71e2', {
+    var pusher = new Pusher(proess.env.PUSHER_APP_KEY, {
       cluster: 'eu',
       forceTLS: true
     });
