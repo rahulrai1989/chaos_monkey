@@ -6,7 +6,7 @@ jobs:
   build:
     working_directory: ~/chaos_monkey
     docker:
-      - image: ucreateit/php7.2:v0.2
+      - image: circleci/php7.2:v0.2
       - image: circleci/postgres:10
     environment:
       - APP_ENV: testing
