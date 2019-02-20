@@ -22,7 +22,7 @@ jobs:
       - checkout
       - run:
          name: Install PHP packages
-         command: RUN docker-php-ext-install pcntl
+         command: docker-php-ext-install pcntl
       - run:
           name: Scripts preparation
           command: |
