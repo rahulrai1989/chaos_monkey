@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7c980a29d985ce414896fc938ea4fa13",
+    "content-hash": "cb2aed6691087931dc8e6b1f7e1c7b01",
     "packages": [
         {
             "name": "2bj/phanybar",
@@ -8289,6 +8289,8 @@
         "php": "^7.1.3",
         "ext-gd": "*",
         "ext-json": "*",
+        "ext-pcntl": "^7.2",
+        "ext-posix": "^7.2",
         "ext-xml": "*",
         "ext-zip": "*"
     },
