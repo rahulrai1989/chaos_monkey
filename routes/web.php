@@ -10,9 +10,16 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+use App\Jobs\SomeJob;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/jobs/{jobs}', function ($job) {
+    for($i=0; $i<$job; $i++) {
+        SomeJob::dispatch();
+    }
 });
 
 Auth::routes();
